@@ -12,7 +12,7 @@ const Home: React.FC = () => {
       <Layout/>
 
 
-      <button className="button is-dark">Button</button>
+     
     </div>  
   );
 
