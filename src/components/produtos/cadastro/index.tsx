@@ -1,5 +1,5 @@
  import { useState } from "react"
- import { Layout } from "components";
+ import { Layout, Input } from "components";
 
  export const CadastroProdutos: React.FC = () => {
 
@@ -23,6 +23,12 @@
     return (
         <Layout titulo="Cadastro de Produtos">
             <div className="columns">
+                <Input 
+                    label=" SKU: *" 
+                    columnClasses="is-half"
+                    onChange={ setSku }
+                />
+
                 <div className="field column is-half">
                     <label className="Label"  htmlFor="inputSku"> SKU: *</label>
                     <div className="control">
