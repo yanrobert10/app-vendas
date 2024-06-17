@@ -1,18 +1,21 @@
-import { on } from "stream";
+import { InputHTMLAttributes } from "react"
 
-interface InputProps {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> { // fazendo que o componente tenha todos os outros elementos que um atributo comun 
+    id:string;
     onChange?: ( value ) => void;
     label:string;
     columnClasses?: string;
-    value:string;
+
+
 
 }
 
 export const Input: React.FC<InputProps> = ({
     onChange,
+    id,
     label,
     columnClasses,
-    value,
+    ...inputProps
 
 
 
@@ -20,19 +23,17 @@ export const Input: React.FC<InputProps> = ({
 }: InputProps) => {
     return (
         <div className={`field column ${columnClasses}`}>
-                    <label className="Label"  htmlFor="inputSku">{label}</label>
+                    <label className="Label"  htmlFor= { id }>{ label }</label>
                     <div className="control">
                         <input 
                             className="input"  
-                            id="inputSku"
+                            id={ id }
+                            { ...inputProps }
                             onChange={ event => {
                                 if (onChange){
                                     onChange(event.target.value)
                                 }
                             }}
-                            placeholder="Digite o SKU do produto" 
-                            value={ value }
-
                         />
                     </div>
 

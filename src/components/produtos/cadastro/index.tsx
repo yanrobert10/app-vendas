@@ -27,69 +27,46 @@
                     label=" SKU: *" 
                     columnClasses="is-half"
                     onChange={ setSku }
+                    value={ sku }
+                    id="inputSku"
+                    placeholder="Digite o SKU do produto" 
                 />
 
-                <div className="field column is-half">
-                    <label className="Label"  htmlFor="inputSku"> SKU: *</label>
-                    <div className="control">
-                        <input 
-                            className="input"  
-                            id="inputSku"
-                            onChange={ event => setSku(event.target.value)}
-                            placeholder="Digite o SKU do produto" 
-                            value={ sku }
+                <Input 
+                    label=" Preço: *" 
+                    columnClasses="is-half"
+                    onChange={ setPreco }
+                    value={ preco }
+                    id="inputPreco"
+                    placeholder="Digite o Preço do produto" 
+                />
 
-                        />
-                    </div>
+            </div>
 
-                </div>
-
-                <div className="field column is-half">
-                    <label className="Label"  htmlFor="inputPreco"> Preço: *</label>
-                    <div className="control">
-                        <input 
-                            className="input"  
-                            id="inputPreco"
-                            onChange={ event => setPreco(event.target.value)}
-                            placeholder="Digite o Preço do produto" 
-                            value={ preco }
-                        />
-                    </div>
-
-                </div>
+            <div className="columns">
+                <Input 
+                    label=" Nome: *" 
+                    columnClasses="is-full"
+                    onChange={ setNome }
+                    value={ nome }
+                    id="inputPreco"
+                    placeholder="Digite o Nome do produto" 
+                />
             </div>
 
             <div className="columns">
                 <div className="field column is-full">
-                    <label className="Label"  htmlFor="inputNome"> Nome: *</label>
+                    <label className="Label"  htmlFor="inputDescricao"> Descrição: *</label>
                     <div className="control">
-                        <input 
-                            className="input"  
-                            id="inputNome"
-                            onChange={ event => setNome(event.target.value)}
-                            placeholder="Digite o Nome do produto" 
-                            value={ nome }
+                        <textarea 
+                            className="textarea"  
+                            id="inputDescricao"
+                            onChange={ event => setDescricao(event.target.value)}
+                            placeholder="Digite a Descrição detalhada do produto" 
+                            value={ descricao }
                         />
                     </div>
-
                 </div>
-                
-            </div>
-
-            <div className="columns">
-            <div className="field column is-full">
-                <label className="Label"  htmlFor="inputDescricao"> Descrição: *</label>
-                <div className="control">
-                    <textarea 
-                        className="textarea"  
-                        id="inputDescricao"
-                        onChange={ event => setDescricao(event.target.value)}
-                        placeholder="Digite a Descrição detalhada do produto" 
-                        value={ descricao }
-                    />
-                </div>
-
-            </div>
             </div>
 
             <div className="field is-grouped">
