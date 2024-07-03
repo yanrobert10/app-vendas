@@ -5,7 +5,7 @@
 </h1>
 
 <h1 align="center">
-    <img src="./src//image/preview.png"target="_blank" style="width: 15rem; height: auto;" alt="Influencer">
+    <img src="./app-vendas/src/image/preview.png"target="_blank" style="width: 15rem; height: auto;" alt="Influencer">
    
 </h1>
 
